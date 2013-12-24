@@ -1,0 +1,12 @@
+<html>
+<head>
+  <title><%= @page_vision or "vision" %></title>
+  <%= stylesheet_link_tag "layout" %>
+  <style><%= yield :stylesheets %></style>
+</head>
+<body>
+  <div id="top_menu">Menü</div>
+  <div id="menu">Menü</div>
+  <div id="content"><%= content_for?(:content) ? yield(:content) : yield %></div>
+</body>
+</html>
